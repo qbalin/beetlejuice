@@ -10,11 +10,11 @@ OptionParser.new do |opts|
   opts.banner = "
     DESCRIPTION
 
-    	Beetlejuice: extracts the juicy bits out of Bugsnag
+      Beetlejuice: extracts the juicy bits out of Bugsnag
 
     USAGE
-   
-    	./beetlejuice.rb [options] url
+
+      ./beetlejuice.rb [options] url
 
     FLAGS
     "
@@ -25,9 +25,9 @@ OptionParser.new do |opts|
 
   opts.on(
     '-kKEYS', '--keys=KEYS', "Paths to values of interest, comma separated
-  	                                e.g.: - app.releaseStage,context,breadcrumbs.metaData.name
-  	                                      - all (for all keys, payload may be huge)
-  	                                      - default: #{default_keys}"
+                                      e.g.: - app.releaseStage,context,breadcrumbs.metaData.name
+                                            - all (for all keys, payload may be huge. Try it once with `-c 1` to see the payload's shape and which keys are available)
+                                            - defaults to #{default_keys}"
   ) do |k|
     options[:keys] = k
   end
@@ -84,7 +84,7 @@ class Beetlejuice
           Go to Bugsnag > Click on your avatar > Settings > Personal auth tokens
           Generate a token and run:
           ./beetlejuice.rb --set-token=your-token
-	     '
+       '
   end
 
   def get_events
