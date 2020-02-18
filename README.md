@@ -29,4 +29,12 @@ For more options:
 ./beetlejuice.rb --help
 ```
 
+### Keys whitelisting
+
+You can filter the keys from the events payload with the `-k list,of,keys` option. Try using the options `-k all -c 1` to see all the existing keys present in the payload of an event. Use of `-k all` is discouraged when fetching many events as the output file may become huge and unwieldy. 
+
+Nesting is supported, to a certain extent, using the dot notation, e.g.: `app.releaseStage`.
+
+
+
 
