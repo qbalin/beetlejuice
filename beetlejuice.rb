@@ -99,7 +99,7 @@ class Beetlejuice
     puts
     puts 'Bugsnag::Api::RateLimitExceeded while getting events list'
     wait_time_total = 60
-    puts "Waiting #{wait_time} seconds"
+    puts "Waiting #{wait_time_total} seconds"
 
     progress_bar_length = 30
     wait_time = wait_time_total / progress_bar_length
